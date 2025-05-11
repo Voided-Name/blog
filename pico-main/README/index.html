@@ -1,0 +1,183 @@
+<p>
+  <a href="https://picocss.com" target="_blank">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/picocss/pico/HEAD/.github/logo-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/picocss/pico/HEAD/.github/logo-light.svg">
+      <img alt="Pico CSS" src="https://raw.githubusercontent.com/picocss/pico/HEAD/.github/logo-light.svg" width="auto" height="60">
+    </picture>
+  </a>
+</p>
+<p><a href="https://github.com/picocss/pico/releases/latest"><img src="https://img.shields.io/github/v/release/picocss/pico?color=0172ad&amp;logo=github&amp;logoColor=white" alt="Github release"></a>
+<a href="https://www.npmjs.com/package/@picocss/pico"><img src="https://img.shields.io/npm/v/@picocss/pico?color=0172ad" alt="npm version"></a>
+<a href="https://github.com/picocss/pico/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-%230172ad" alt="License"></a>
+<a href="https://x.com/picocss"><img src="https://img.shields.io/twitter/url/https/twitter.com/picocss.svg?style=social&amp;label=Follow%20%40picocss" alt="X (formerly Twitter)"></a></p>
+<h2>Minimal CSS Framework for Semantic HTML</h2>
+<p>A minimalist and lightweight starter kit that prioritizes semantic syntax, making every HTML element responsive and elegant by default.</p>
+<p>Write HTML, Add Pico CSS, and Voilà!</p>
+<h2>What’s new in v2?</h2>
+<p>Pico v2.0 features better accessibility, easier customization with SASS, a complete color palette, a new group component, and 20 precompiled color themes totaling over 100 combinations accessible via CDN.</p>
+<p><a href="https://picocss.com/docs/v2">Read more</a></p>
+<h2>A Superpowered HTML Reset</h2>
+<p>With just the right amount of everything, Pico is great starting point for a clean and lightweight design system.</p>
+<ul>
+<li>Class-light and Semantic</li>
+<li>Great Styles with Just CSS</li>
+<li>Responsive Everything</li>
+<li>Light or Dark Mode</li>
+<li>Easy Customization</li>
+<li>Optimized Performance</li>
+</ul>
+<h2>Table of contents</h2>
+<ul>
+<li><a href="#quick-start">Quick start</a></li>
+<li><a href="#class-less-version">Class-less version</a></li>
+<li><a href="#limitations">Limitations</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#browser-support">Browser Support</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#copyright-and-license">Copyright and license</a></li>
+</ul>
+<h2>Quick start</h2>
+<p>There are 4 ways to get started with pico.css:</p>
+<h3>Install manually</h3>
+<p><a href="https://github.com/picocss/pico/archive/refs/heads/main.zip">Download Pico</a> and link <code>/css/pico.min.css</code> in the <code>&lt;head&gt;</code> of your website.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/pico.min.css&quot;&gt;
+</code></pre>
+<h3>Usage from CDN</h3>
+<p>Alternatively, you can use <a href="https://www.jsdelivr.com/package/npm/@picocss/pico">jsDelivr CDN</a> to link pico.css.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css&quot;&gt;
+</code></pre>
+<h3>Install with NPM</h3>
+<pre><code class="language-shell">npm install @picocss/pico
+</code></pre>
+<p>Or</p>
+<pre><code class="language-shell">yarn add @picocss/pico
+</code></pre>
+<p>Then, import Pico into your SCSS file with <a href="https://sass-lang.com/documentation/at-rules/use">@use</a>:</p>
+<pre><code class="language-SCSS">@use &quot;pico&quot;;
+</code></pre>
+<h3>Install with Composer</h3>
+<pre><code class="language-shell">composer require picocss/pico
+</code></pre>
+<h3>Starter HTML template</h3>
+<pre><code class="language-HTML">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;meta name=&quot;color-scheme&quot; content=&quot;light dark&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/pico.min.css&quot;&gt;
+    &lt;title&gt;Hello world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main class=&quot;container&quot;&gt;
+      &lt;h1&gt;Hello world!&lt;/h1&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>Class-less version</h2>
+<p>Pico provides a <code>.classless</code> version.</p>
+<p>In this version, <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> inside <code>&lt;body&gt;</code> act as containers to define a centered or a fluid viewport.</p>
+<p>Use the default <code>.classless</code> version if you need centered viewports:</p>
+<pre><code class="language-html">&lt;link
+  rel=&quot;stylesheet&quot;
+  href=&quot;https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css&quot;
+/&gt;
+</code></pre>
+<p>Or use the <code>.fluid.classless</code> version if you need a fluid container:</p>
+<pre><code class="language-html">&lt;link
+  rel=&quot;stylesheet&quot;
+  href=&quot;https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css&quot;
+&gt;
+</code></pre>
+<p>Then just write pure HTML, and it should look great:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;meta name=&quot;color-scheme&quot; content=&quot;light dark&quot;&gt;
+    &lt;link
+      rel=&quot;stylesheet&quot;
+      href=&quot;https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css&quot;
+    &gt;
+    &lt;title&gt;Hello, world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>Limitations</h2>
+<p>Pico CSS can be used without custom CSS for quick or small projects. However, it’s designed as a starting point, like a “reset CSS on steroids”. As Pico does not integrate any helpers or utilities <code>.classes</code>, this minimal CSS framework requires SCSS or CSS knowledge to build large projects.</p>
+<p><a href="https://picocss.com/docs/usage-scenarios">Read more</a></p>
+<h2>Documentation</h2>
+<p><strong>Getting started</strong></p>
+<ul>
+<li><a href="https://picocss.com/docs">Quick start</a></li>
+<li><a href="https://picocss.com/docs/version-picker">Version picker <code>New</code></a></li>
+<li><a href="https://picocss.com/docs/color-schemes">Color schemes</a></li>
+<li><a href="https://picocss.com/docs/classless">Class-less version</a></li>
+<li><a href="https://picocss.com/docs/conditional">Conditional styling <code>New</code></a></li>
+<li><a href="https://picocss.com/docs/rtl">RTL</a></li>
+</ul>
+<p><strong>Customization</strong></p>
+<ul>
+<li><a href="https://picocss.com/docs/css-variables">CSS Variables</a></li>
+<li><a href="https://picocss.com/docs/sass">Sass</a></li>
+<li><a href="https://picocss.com/docs/colors">Colors <code>New</code></a></li>
+</ul>
+<p><strong>Layout</strong></p>
+<ul>
+<li><a href="https://picocss.com/docs/container">Container</a></li>
+<li><a href="https://picocss.com/docs/landmarks-section">Landmarks &amp; section</a></li>
+<li><a href="https://picocss.com/docs/grid">Grid</a></li>
+<li><a href="https://picocss.com/docs/overflow-auto">Overflow auto <code>New</code></a></li>
+</ul>
+<p><strong>Content</strong></p>
+<ul>
+<li><a href="https://picocss.com/docs/typography">Typography</a></li>
+<li><a href="https://picocss.com/docs/link">Link</a></li>
+<li><a href="https://picocss.com/docs/button">Button</a></li>
+<li><a href="https://picocss.com/docs/table">Table</a></li>
+</ul>
+<p><strong>Forms</strong></p>
+<ul>
+<li><a href="https://picocss.com/docs/forms">Overview</a></li>
+<li><a href="https://picocss.com/docs/forms/input">Input</a></li>
+<li><a href="https://picocss.com/docs/forms/textarea">Textarea</a></li>
+<li><a href="https://picocss.com/docs/forms/select">Select</a></li>
+<li><a href="https://picocss.com/docs/forms/checkboxes">Checkboxes</a></li>
+<li><a href="https://picocss.com/docs/forms/radios">Radios</a></li>
+<li><a href="https://picocss.com/docs/forms/switch">Switch</a></li>
+<li><a href="https://picocss.com/docs/forms/range">Range</a></li>
+</ul>
+<p><strong>Components</strong></p>
+<ul>
+<li><a href="https://picocss.com/docs/accordion">Accordion</a></li>
+<li><a href="https://picocss.com/docs/card">Card</a></li>
+<li><a href="https://picocss.com/docs/dropdown">Dropdown</a></li>
+<li><a href="https://picocss.com/docs/group">Group <code>New</code></a></li>
+<li><a href="https://picocss.com/docs/loading">Loading</a></li>
+<li><a href="https://picocss.com/docs/modal">Modal</a></li>
+<li><a href="https://picocss.com/docs/nav">Nav</a></li>
+<li><a href="https://picocss.com/docs/progress">Progress</a></li>
+<li><a href="https://picocss.com/docs/tooltip">Tooltip</a></li>
+</ul>
+<p><strong>About</strong></p>
+<ul>
+<li><a href="https://picocss.com/docs/v2">What’s new in v2?</a></li>
+<li><a href="https://picocss.com/docs/mission">Mission</a></li>
+<li><a href="https://picocss.com/docs/usage-scenarios">Usage scenarios</a></li>
+<li><a href="https://picocss.com/docs/brand">Brand</a></li>
+<li><a href="https://picocss.com/docs/built-with">Built With</a></li>
+</ul>
+<h2>Browser Support</h2>
+<p>Pico CSS is designed and tested for the latest stable Chrome, Firefox, Edge, and Safari releases. It does not support any version of IE, including IE 11.</p>
+<h2>Contributing</h2>
+<p>If you are interested in contributing to Pico CSS, please read our <a href="https://github.com/picocss/pico/blob/master/.github/CONTRIBUTING.md">contributing guidelines</a>.</p>
+<h2>Copyright and license</h2>
+<p>Licensed under the <a href="https://github.com/picocss/pico/blob/master/LICENSE.md">MIT License</a>.</p>
